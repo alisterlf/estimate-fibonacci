@@ -6,23 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="main.js" defer></script>
     <title>Estimate Fibonacci</title>
+    <style>
+      input[type='range'] {
+        width: 100%;
+      }
+      option {
+        padding: 0;
+      }
+    </style>
   </head>
   <body>
     <form>
       <h2>Complexidade</h2>
-      <input type="radio" name="complexity" id="low-complexity" value="0" />
-      <label for="low-complexity">Baixa</label>
-      <input type="radio" name="complexity" id="medium-complexity" value="1" />
-      <label for="medium-complexity">Média</label>
-      <input type="radio" name="complexity" id="high-complexity" value="2" />
-      <label for="high-complexity">Alta</label>
+      <input type="range" name="complexity" min="0" max="10" step="1" value="0" oninput="complexityOutput.value = complexity.value" />
+      <output name="complexityOutput">0</output>
+      <br />
       <h2>Esforço</h2>
-      <input type="radio" name="effort" id="low-effort" value="0" />
-      <label for="low-effort">Baixa</label>
-      <input type="radio" name="effort" id="medium-effort" value="1" />
-      <label for="medium-effort">Média</label>
-      <input type="radio" name="effort" id="high-effort" value="2" />
-      <label for="high-effort">Alta</label>
+      <input type="range" name="effort" min="0" max="10" step="1" value="0" oninput="effortOutput.value = effort.value" />
+      <output name="effortOutput">0</output>
       <br /><br />
       <button type="submit">Calcular</button>
     </form>
