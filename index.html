@@ -6,24 +6,67 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="main.js" defer></script>
     <title>Estimate Fibonacci</title>
+    <style>
+      body {
+        font: 400 1rem/1.75 system-ui, -apple-system, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans;
+      }
+      input {
+        margin-right: 0.5rem;
+        display: inline-block;
+        height: 1.25rem;
+        width: 1.25rem;
+        vertical-align: sub;
+      }
+      option {
+        padding: 0;
+      }
+      div {
+        gap: 2rem;
+        display: grid;
+        grid-auto-flow: column;
+        justify-content: start;
+      }
+      button {
+        background-color: #bad455;
+        margin-top: 2rem;
+        font-size: 1.5rem;
+        padding: 0.5em;
+        border: 0.1em solid hsl(72, 60%, 40%);
+        border-radius: 0.5em;
+        font-weight: 600;
+        color: #444;
+      }
+      button:focus {
+        background-color: hsl(72, 60%, 40%);
+        border: 0.1em solid hsl(72, 60%, 30%);
+        color: #eee;
+      }
+    </style>
   </head>
   <body>
     <form>
       <h2>Complexidade</h2>
-      <input type="radio" name="complexity" id="low-complexity" value="0" />
-      <label for="low-complexity">Baixa</label>
-      <input type="radio" name="complexity" id="medium-complexity" value="1" />
-      <label for="medium-complexity">Média</label>
-      <input type="radio" name="complexity" id="high-complexity" value="2" />
-      <label for="high-complexity">Alta</label>
+      <div>
+        <label for="very-low-complexity">
+          <input type="radio" name="complexity" id="very-low-complexity" value="0" required />
+          Muito Baixa
+        </label>
+        <label for="low-complexity"> <input type="radio" name="complexity" id="low-complexity" value="1" />Baixa </label>
+        <label for="medium-complexity"><input type="radio" name="complexity" id="medium-complexity" value="2" />Média </label>
+        <label for="high-complexity"><input type="radio" name="complexity" id="high-complexity" value="3" />Alta </label>
+        <label for="very-high-complexity">
+          <input type="radio" name="complexity" id="very-high-complexity" value="4" />
+          Muito Alta
+        </label>
+      </div>
       <h2>Esforço</h2>
-      <input type="radio" name="effort" id="low-effort" value="0" />
-      <label for="low-effort">Baixa</label>
-      <input type="radio" name="effort" id="medium-effort" value="1" />
-      <label for="medium-effort">Média</label>
-      <input type="radio" name="effort" id="high-effort" value="2" />
-      <label for="high-effort">Alta</label>
-      <br /><br />
+      <div>
+        <label for="very-low-effort"><input type="radio" name="effort" id="very-low-effort" value="0" required />Muito Baixa </label>
+        <label for="low-effort"><input type="radio" name="effort" id="low-effort" value="1" />Baixa </label>
+        <label for="medium-effort"><input type="radio" name="effort" id="medium-effort" value="2" />Média </label>
+        <label for="high-effort"><input type="radio" name="effort" id="high-effort" value="3" />Alta </label>
+        <label for="very-high-effort"><input type="radio" name="effort" id="very-high-effort" value="4" />Muito Alta </label>
+      </div>
       <button type="submit">Calcular</button>
     </form>
     <h1></h1>
