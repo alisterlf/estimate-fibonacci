@@ -1,6 +1,6 @@
 function calculate(event) {
   event.preventDefault();
-  const form = event.path[0];
+  const form = event.currentTarget;
   const formDataEntries = new FormData(form).entries();
   const { effort, complexity } = Object.fromEntries(formDataEntries);
   const points = [
